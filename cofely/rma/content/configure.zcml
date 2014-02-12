@@ -1,0 +1,25 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="cofely.rma">
+
+  <!-- configure your content components here -->
+  
+  <!-- -*- extra stuff goes here -*- -->
+  <class class=".rmafolder.RMAfolder">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IRMAfolder"
+        />
+  </class>
+  <class class=".rma.RMA">
+    <require
+        permission="zope2.View"
+        interface="..interfaces.IRMA"
+        />
+  </class>
+  <subscriber
+      provides= "Products.Archetypes.interfaces.IObjectPostValidation"
+      factory=".validators.ValidateRequiredInput"
+  />
+</configure>

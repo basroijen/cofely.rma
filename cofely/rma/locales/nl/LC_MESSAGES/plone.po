@@ -1,0 +1,90 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-03-29 12:47+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: nl\n"
+"Language-Name: Nederlands\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plone\n"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "Arrived"
+msgstr "Binnengekomen"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "Completed"
+msgstr "Verzonden"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "In repair"
+msgstr "In behandeling"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "In repairing rack"
+msgstr "In reparatiestelling"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "Processed"
+msgstr "Verwerkt"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "RMA_Proces_Workflow"
+msgstr ""
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "Ready for dispatch"
+msgstr "Verzonden"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "Received"
+msgstr "Ontvangen"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "Received and Processed"
+msgstr "Ontvangen en verwerkt"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "Repair finished"
+msgstr "Gerepareerd"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "Repaired"
+msgstr "Gerepareerd"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "Requested"
+msgstr "Aangevraagd"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "Start repair"
+msgstr "Start reparatie"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "tender_approval"
+msgstr "Goedkeuring offerte"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "waiting_for_material"
+msgstr "Wacht op materiaal"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "approved"
+msgstr "Goedgekeurd"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "approved_waiting"
+msgstr "Goedgekeurd & wachten op materiaal"
+
+#: ./../profiles/default/workflows/RMA_Proces_Workflow/definition.xml
+msgid "made_tender"
+msgstr "Offerte gemaakt & naar klant gestuurd"

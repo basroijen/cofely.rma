@@ -1,0 +1,527 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-06-06 18:24+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: cofely.rma\n"
+
+#: ./../content/rma.py:296
+msgid "Amount"
+msgstr ""
+
+#: ./../content/rma.py:271
+#: ./../interfaces/rma.py:98
+msgid "Arrival Description"
+msgstr ""
+
+#: ./../content/rma.py:257
+#: ./../interfaces/rma.py:92
+msgid "Arrival date"
+msgstr ""
+
+#: ./../content/rma.py:133
+#: ./../interfaces/rma.py:80
+msgid "City"
+msgstr ""
+
+#: ./../content/rma.py:134
+#: ./../interfaces/rma.py:82
+msgid "City of your delivery adress."
+msgstr ""
+
+#: ./../content/rma.py:60
+#: ./../interfaces/rma.py:50
+msgid "Company"
+msgstr ""
+
+#: ./../content/rma.py:77
+#: ./../interfaces/rma.py:56
+msgid "Company contact"
+msgstr ""
+
+#: ./../content/rma.py:230
+#: ./../interfaces/rma.py:38
+msgid "Complaint"
+msgstr ""
+
+#: ./../content/rma.py:147
+#: ./../interfaces/rma.py:86
+msgid "Country"
+msgstr ""
+
+#: ./../content/rma.py:148
+#: ./../interfaces/rma.py:88
+msgid "Country of your delivery adress."
+msgstr ""
+
+#: ./../profiles/default/types/RMA.xml
+msgid "Create a new RMA"
+msgstr ""
+
+#: ./../events.py:34
+msgid "Customer has been informed of the status change."
+msgstr ""
+
+#: ./../content/rma.py:162
+#: ./../interfaces/rma.py:34
+msgid "Customer's own reference number."
+msgstr ""
+
+#: ./../content/rma.py:258
+#: ./../interfaces/rma.py:94
+msgid "Date that the RMA arrived back."
+msgstr ""
+
+#: ./../content/rma.py:245
+#: ./../interfaces/rma.py:124
+msgid "Do you want to claim a warranty?"
+msgstr ""
+
+#: ./../profiles/default/types/RMA_folder.xml
+msgid "Folder containing al the RMA's."
+msgstr ""
+
+#: ./../content/rma.py:308
+#: ./../interfaces/rma.py:20
+msgid "Hours worked"
+msgstr ""
+
+#: ./../content/rma.py:309
+#: ./../interfaces/rma.py:22
+msgid "Hours worked to 'fix' the RMA."
+msgstr ""
+
+#: ./../content/rma.py:272
+#: ./../interfaces/rma.py:100
+msgid "In which repair rack was the item put."
+msgstr ""
+
+#: ./../content/rma.py:175
+#: ./../interfaces/rma.py:44
+msgid "Item"
+msgstr ""
+
+#: ./../content/rma.py:297
+msgid "Material"
+msgstr ""
+
+#: ./../content/rma.py:294
+msgid "Materials used fo repair the item."
+msgstr ""
+
+#: ./../content/rma.py:61
+msgid "Name of the company that is sending an item                             back."
+msgstr ""
+
+#: ./../interfaces/rma.py:52
+msgid "Name of the company that is sending an item back."
+msgstr ""
+
+#: ./../content/rma.py:176
+#: ./../interfaces/rma.py:46
+msgid "Name or type of item that is being returned."
+msgstr ""
+
+#: ./../content/rma.py:92
+#: ./../interfaces/rma.py:64
+msgid "Phone number of the contact."
+msgstr ""
+
+#: ./../content/rma.py:91
+#: ./../interfaces/rma.py:62
+msgid "Phonenumber"
+msgstr ""
+
+#: ./../content/rma.py:119
+#: ./../interfaces/rma.py:74
+msgid "Postalcode"
+msgstr ""
+
+#: ./../content/rma.py:120
+#: ./../interfaces/rma.py:76
+msgid "Postalcode of your delivery adress."
+msgstr ""
+
+#: ./../content/rma.py:189
+#: ./../interfaces/rma.py:104
+msgid "Product type"
+msgstr ""
+
+#: ./../profiles/default/types/RMA.xml
+msgid "RMA"
+msgstr ""
+
+#: ./../profiles/default/types/RMA_folder.xml
+msgid "RMA folder"
+msgstr ""
+
+#: ./../content/rma.py:43
+#: ./../interfaces/rma.py:26
+msgid "RMA number"
+msgstr ""
+
+#: ./../tools.py:43
+msgid "Recipient address rejected by server."
+msgstr ""
+
+#: ./../content/rma.py:161
+#: ./../interfaces/rma.py:32
+msgid "Referencenumber customer"
+msgstr ""
+
+#: ./../content/rma.py:283
+#: ./../interfaces/rma.py:14
+msgid "Repair report"
+msgstr ""
+
+#: ./../content/rma.py:216
+#: ./../interfaces/rma.py:116
+msgid "Serial number"
+msgstr ""
+
+#: ./../content/rma.py:217
+#: ./../interfaces/rma.py:118
+msgid "Serial number of item that is being returned. This field is required if 'Speed control' is chosen as 'Product type'."
+msgstr ""
+
+#: ./../browser/rmafolderview.py:74
+msgid "Showing all completed RMA's."
+msgstr ""
+
+#: ./../browser/rmafolderview.py:69
+msgid "Showing all open RMA's."
+msgstr ""
+
+#: ./../events.py:46
+msgid "Status has been updated."
+msgstr ""
+
+#: ./../content/rma.py:105
+#: ./../interfaces/rma.py:68
+msgid "Street"
+msgstr ""
+
+#: ./../content/rma.py:106
+#: ./../interfaces/rma.py:70
+msgid "Street of your delivery adress."
+msgstr ""
+
+#: ./../content/rma.py:284
+msgid "Text that outlines the action that was taken                             to 'fix' the RMA."
+msgstr ""
+
+#: ./../interfaces/rma.py:16
+msgid "Text that outlines the action that was taken to 'fix' the RMA."
+msgstr ""
+
+#: ./../events.py:71
+msgid "The company has been informed of the status change."
+msgstr ""
+
+#: ./../content/rma.py:78
+#: ./../interfaces/rma.py:58
+msgid "The person to contact for this item."
+msgstr ""
+
+#: ./../content/validators.py:28
+msgid "This field is required if 'speed control', 'GTV' or 'motoren' is chosen in the 'product type'-field."
+msgstr ""
+
+#: ./../content/rma.py:204
+#: ./../interfaces/rma.py:110
+msgid "Type number"
+msgstr ""
+
+#: ./../content/rma.py:205
+#: ./../interfaces/rma.py:112
+msgid "Type number of item that is being returned."
+msgstr ""
+
+#: ./../content/rma.py:44
+msgid "Unique number for the RMA item, should be auto                             generated."
+msgstr ""
+
+#: ./../interfaces/rma.py:28
+msgid "Unique number for the RMA item, should be auto generated."
+msgstr ""
+
+#: ./../content/rma.py:293
+msgid "Used materials"
+msgstr ""
+
+#: ./../content/rma.py:244
+#: ./../interfaces/rma.py:122
+msgid "Warranty"
+msgstr ""
+
+#: ./../content/rma.py:190
+#: ./../interfaces/rma.py:106
+msgid "What kind of item is this?"
+msgstr ""
+
+#: ./../content/rma.py:231
+#: ./../interfaces/rma.py:40
+msgid "What's wrong with the item you are returning?"
+msgstr ""
+
+#: ./../browser/rmaview.py:40
+msgid "a dummy string"
+msgstr ""
+
+#. Default: "Help"
+#: ./../browser/rmafolderview.pt:26
+msgid "help"
+msgstr ""
+
+#. Default: "Faxnumber of your company"
+#: ./../userdataschema.py:39
+msgid "help_companyFax"
+msgstr ""
+
+#. Default: "Name of your company"
+#: ./../userdataschema.py:25
+msgid "help_companyName"
+msgstr ""
+
+#. Default: "Phonenumber of your company"
+#: ./../userdataschema.py:32
+msgid "help_companyPhone"
+msgstr ""
+
+#. Default: "City of your default delivery adress."
+#: ./../userdataschema.py:60
+msgid "help_deliveryCity"
+msgstr ""
+
+#. Default: "Country of your default delivery adress."
+#: ./../userdataschema.py:67
+msgid "help_deliveryCountry"
+msgstr ""
+
+#. Default: "Postalcode of your default delivery adress."
+#: ./../userdataschema.py:53
+msgid "help_deliveryPostalcode"
+msgstr ""
+
+#. Default: "Street of your default delivery adress"
+#: ./../userdataschema.py:46
+msgid "help_deliveryStreet"
+msgstr ""
+
+#. Default: "City"
+#: ./../browser/rmaview.pt:297
+msgid "label_City"
+msgstr ""
+
+#. Default: "Country"
+#: ./../browser/rmaview.pt:312
+msgid "label_Country"
+msgstr ""
+
+#. Default: "Postalcode"
+#: ./../browser/rmaview.pt:282
+msgid "label_Postalcode"
+msgstr ""
+
+#. Default: "Street"
+#: ./../browser/rmaview.pt:267
+msgid "label_Street"
+msgstr ""
+
+#. Default: "Arrival date"
+#: ./../browser/rmaview.pt:140
+msgid "label_arrivalDate"
+msgstr ""
+
+#. Default: "Arrival description"
+#: ./../browser/rmaview.pt:155
+msgid "label_arrivalDescription"
+msgstr ""
+
+#. Default: "Company"
+#: ./../browser/rmaview.pt:219
+msgid "label_company"
+msgstr ""
+
+#. Default: "Company Contact"
+#: ./../browser/rmaview.pt:234
+msgid "label_companyContact"
+msgstr ""
+
+#. Default: "Company Faxnumber"
+#: ./../userdataschema.py:38
+msgid "label_companyFax"
+msgstr ""
+
+#. Default: "Company Name"
+#: ./../userdataschema.py:24
+msgid "label_companyName"
+msgstr ""
+
+#. Default: "Company Phonenumber"
+#: ./../browser/rmaview.pt:249
+msgid "label_companyPhone"
+msgstr ""
+
+#. Default: "Company Phonenumber"
+#: ./../userdataschema.py:31
+msgid "label_companyPhonenumber"
+msgstr ""
+
+#. Default: "Create new RMA"
+#: ./../browser/rmafolderview.pt:53
+msgid "label_create"
+msgstr ""
+
+#. Default: "Referencenumber customer"
+#: ./../browser/rmaview.pt:44
+msgid "label_customerReference"
+msgstr ""
+
+#. Default: "Delivery adress"
+#: ./../browser/rmaview.pt:262
+msgid "label_deliveryAdress"
+msgstr ""
+
+#. Default: "Delivery City"
+#: ./../userdataschema.py:59
+msgid "label_deliveryCity"
+msgstr ""
+
+#. Default: "Delivery Country"
+#: ./../userdataschema.py:66
+msgid "label_deliveryCountry"
+msgstr ""
+
+#. Default: "Delivery Postal code"
+#: ./../userdataschema.py:52
+msgid "label_deliveryPostalcode"
+msgstr ""
+
+#. Default: "Delivery Street"
+#: ./../userdataschema.py:45
+msgid "label_deliveryStreet"
+msgstr ""
+
+#. Default: "Complaint"
+#: ./../browser/rmaview.pt:123
+msgid "label_description"
+msgstr ""
+
+#. Default: "History"
+#: ./../browser/rmafolderview.pt:46
+msgid "label_history"
+msgstr ""
+
+#. Default: "Type of product"
+#: ./../browser/rmaview.pt:61
+msgid "label_productType"
+msgstr ""
+
+#. Default: "Worked hours"
+#: ./../browser/rmaview.pt:187
+msgid "label_repairingHours"
+msgstr ""
+
+#. Default: "Repairing report"
+#: ./../browser/rmaview.pt:172
+msgid "label_repairingReport"
+msgstr ""
+
+#. Default: "RMA number"
+#: ./../browser/rmaview.pt:29
+msgid "label_rmaNumber"
+msgstr ""
+
+#. Default: "Serial number"
+#: ./../browser/rmaview.pt:91
+msgid "label_serialNumber"
+msgstr ""
+
+#. Default: "Type number"
+#: ./../browser/rmaview.pt:76
+msgid "label_typeNumber"
+msgstr ""
+
+#. Default: "Used materials"
+#: ./../browser/rmaview.pt:202
+msgid "label_usedMaterials"
+msgstr ""
+
+#. Default: "Warranty"
+#: ./../browser/rmaview.pt:108
+msgid "label_warranty"
+msgstr ""
+
+#. Default: "Arrived"
+#: ./../browser/rmafolderview.pt:67
+msgid "listingheader_arrivaldate"
+msgstr ""
+
+#. Default: "Company"
+#: ./../browser/rmafolderview.pt:68
+msgid "listingheader_company"
+msgstr ""
+
+#. Default: "Complaint"
+#: ./../browser/rmafolderview.pt:70
+msgid "listingheader_complaint"
+msgstr ""
+
+#. Default: "Item"
+#: ./../browser/rmafolderview.pt:69
+msgid "listingheader_item"
+msgstr ""
+
+#. Default: "Repairingreport"
+#: ./../browser/rmafolderview.pt:73
+msgid "listingheader_repairingreport"
+msgstr ""
+
+#. Default: "RMA#"
+#: ./../browser/rmafolderview.pt:72
+msgid "listingheader_rmanumber"
+msgstr ""
+
+#. Default: "Status"
+#: ./../browser/rmafolderview.pt:71
+msgid "listingheader_status"
+msgstr ""
+
+#. Default: "Advice"
+#: ./../browser/rmafolderview.pt:33
+msgid "ml_advice"
+msgstr ""
+
+#. Default: "blabla"
+#: ./../browser/rmafolderview.pt:35
+msgid "ml_advice_time"
+msgstr ""
+
+#. Default: "My RMA's"
+#: ./../browser/rmafolderview.pt:16
+msgid "my_rmas"
+msgstr ""
+
+#. Default: "Initieel worden alleen nog niet afgeronde RMA's getoond."
+#: ./../browser/rmafolderview.pt:30
+msgid "rma_initial"
+msgstr ""
+
+#. Default: "Klik op 'Historie' om al uw afgeronde RMA's te zien."
+#: ./../browser/rmafolderview.pt:31
+msgid "rma_search"
+msgstr ""
+

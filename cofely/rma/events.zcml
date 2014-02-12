@@ -1,0 +1,28 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="cofely.rma" >
+   
+   <subscriber
+      for="cofely.rma.interfaces.rma.IRMA
+                      zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+      handler=".events.updateWorkflowStatus"
+      />
+
+   <subscriber
+      for="cofely.rma.interfaces.rma.IRMA
+                      Products.Archetypes.interfaces.IObjectInitializedEvent"
+      handler=".events.rmaAdded"
+      />
+
+    <!-- Products.Archetypes.interfaces.IObjectEditedEvent is fired after reindexObject() is called.
+         If you manipulate your content object in a handler for this event, you need to manually reindex new values, 
+         or the changes are not reflected back to portal_catalog.
+         See http://collective-docs.plone.org/events_and_rules/events.html
+   <subscriber
+      for="cofelyPfponline.employees.interfaces.IEmployee
+                      Products.Archetypes.interfaces.IObjectEditedEvent"
+      handler=".events.employeeEditCreate"
+      />-->
+      
+</configure>

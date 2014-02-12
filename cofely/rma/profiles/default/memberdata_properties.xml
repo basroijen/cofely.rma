@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<object name="portal_memberdata" meta_type="PlonePAS MemberData Tool">
+ <property name="companyName" type="string"></property>
+ <property name="companyPhone" type="string"></property> 
+ <property name="companyFax" type="string"></property> 
+ <property name="deliveryStreet" type="string"></property>
+ <property name="deliveryPostalcode" type="string"></property>
+ <property name="deliveryCity" type="string"></property>
+ <property name="deliveryCountry" type="string"></property>
+</object>

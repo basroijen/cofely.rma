@@ -1,0 +1,36 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="cofely.rma">
+
+  <include package="plone.app.contentmenu" />
+
+  <!-- -*- extra stuff goes here -*- -->
+
+  <browser:page
+      for="cofely.rma.interfaces.rmafolder.IRMAfolder"
+      name="rmafolder_view"
+      class=".rmafolderview.RMAFolderView"
+      template="rmafolderview.pt"
+      allowed_interface=".rmafolderview.IRMAFolderView"
+      permission="zope2.View"
+      layer="cofely.rma.interfaces.rmabrowserlayer.IRMABrowserLayer"
+      />
+
+  <browser:page
+      for="cofely.rma.interfaces.rma.IRMA"
+      name="rma_view"
+      class=".rmaview.RMAView"
+      template="rmaview.pt"
+      allowed_interface=".rmaview.IRMAView"
+      permission="zope2.View"
+      layer="cofely.rma.interfaces.rmabrowserlayer.IRMABrowserLayer"
+      />
+
+  <browser:resourceDirectory
+      name="cofely.rma.stylesheets"
+      directory="stylesheets"
+      layer="cofely.rma.interfaces.rmabrowserlayer.IRMABrowserLayer"
+      />
+
+</configure>

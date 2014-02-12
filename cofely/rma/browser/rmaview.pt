@@ -1,0 +1,332 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="cofely.rma">
+<body>
+
+<metal:main fill-slot="main">
+    <tal:main-macro metal:define-macro="main"
+                    tal:define="context_state context/@@plone_context_state;">
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <h1 class="documentFirstHeading">
+            <metal:field use-macro="python:here.widget('title', mode='view')">
+            Title
+            </metal:field>
+        </h1>
+
+        <div tal:replace="structure provider:plone.belowcontenttitle" />
+
+        <div tal:replace="structure provider:plone.abovecontentbody" />
+
+        <div tal:condition="python:checkPermission('cofely.rma: View RMA', context)">
+        <div tal:condition="here/getRmaNumber|nothing" id="rmaNumber">
+            <label>
+              <span class="prompt"
+                    i18n:translate="label_rmaNumber">RMA number</span>
+              :
+            </label>
+            <span class="value">
+              <metal:field use-macro="python:here.widget('rmaNumber', mode='view')">
+              rmaNumber
+              </metal:field>
+            </span>
+        </div>
+        </div>
+
+        <div tal:condition="python:checkPermission('cofely.rma: View RMA', context)">
+        <div tal:condition="here/getCustomerReference|nothing" id="customerReference">
+            <label>
+              <span class="prompt"
+                    i18n:translate="label_customerReference">Referencenumber customer</span>
+              :
+            </label>
+            <span class="value">
+              <metal:field use-macro="python:here.widget('customerReference', mode='view')">
+              customerReference
+              </metal:field>
+            </span>
+        </div>
+        </div>
+
+        <br />
+
+        <div tal:condition="python:checkPermission('cofely.rma: View RMA', context)">
+        <div tal:condition="here/getProductType|nothing" id="productType">
+            <label>
+              <span class="prompt"
+                    i18n:translate="label_productType">Type of product</span>
+              :
+            </label>
+            <span class="value">
+              <metal:field use-macro="python:here.widget('productType', mode='view')">
+              productType
+              </metal:field>
+            </span>
+        </div>
+        </div>
+
+        <div tal:condition="python:checkPermission('cofely.rma: View RMA', context)">
+        <div tal:condition="here/getTypeNumber|nothing" id="typeNumber">
+            <label>
+              <span class="prompt"
+                    i18n:translate="label_typeNumber">Type number</span>
+              :
+            </label>
+            <span class="value">
+              <metal:field use-macro="python:here.widget('typeNumber', mode='view')">
+              typeNumber
+              </metal:field>
+            </span>
+        </div>
+        </div>
+
+        <div tal:condition="python:checkPermission('cofely.rma: View RMA', context)">
+        <div tal:condition="here/getSerialNumber|nothing" id="serialNumber">
+            <label>
+              <span class="prompt"
+                    i18n:translate="label_serialNumber">Serial number</span>
+              :
+            </label>
+            <span class="value">
+              <metal:field use-macro="python:here.widget('serialNumber', mode='view')">
+              serialNumber
+              </metal:field>
+            </span>
+        </div>
+        </div>
+
+        <br />
+
+        <div tal:condition="python:checkPermission('cofely.rma: View RMA', context)">
+        <div tal:condition="here/getWarranty|nothing" id="warranty">
+            <label>
+              <span class="prompt"
+                    i18n:translate="label_warranty">Warranty</span>
+              :
+            </label>
+            <span class="value">
+              <metal:field use-macro="python:here.widget('warranty', mode='view')">
+              warranty
+              </metal:field>
+            </span>
+        </div>
+        </div>
+
+        <div tal:condition="python:checkPermission('cofely.rma: View RMA', context)">
+        <div tal:condition="here/Description|nothing" id="description">
+            <label>
+              <span class="prompt"
+                    i18n:translate="label_description">Complaint</span>
+              :
+            </label>
+            <span class="value">
+              <metal:field use-macro="python:here.widget('description', mode='view')">
+              description
+              </metal:field>
+            </span>
+        </div>
+        </div>
+
+        <br />
+
+        <div tal:condition="python:checkPermission('cofely.rma: View Arrival date', context)">
+        <div tal:condition="here/getArrivalDate|nothing" id="arrivalDate">
+            <label>
+              <span class="prompt"
+                    i18n:translate="label_arrivalDate">Arrival date</span>
+              :
+            </label>
+            <span class="value">
+              <metal:field use-macro="python:here.widget('arrivalDate', mode='view')">
+              arrivalDate
+              </metal:field>
+            </span>
+        </div>
+        </div>
+
+        <div tal:condition="python:checkPermission('cofely.rma: View Arrival date', context)">
+        <div tal:condition="here/getArrivalDescription|nothing" id="arrivalDescription">
+            <label>
+              <span class="prompt"
+                    i18n:translate="label_arrivalDescription">Arrival description</span>
+              :
+            </label>
+            <span class="value">
+              <metal:field use-macro="python:here.widget('arrivalDescription', mode='view')">
+              arrivalDescription
+              </metal:field>
+            </span>
+        </div>
+        </div>
+
+        <br />
+
+        <div tal:condition="python:checkPermission('cofely.rma: View repair report', context)">
+        <div tal:condition="here/getRepairingReport|nothing" id="repairingReport">
+            <label>
+              <span class="prompt"
+                    i18n:translate="label_repairingReport">Repairing report</span>
+              :
+            </label>
+            <span class="value">
+              <metal:field use-macro="python:here.widget('repairingReport', mode='view')">
+              repairingReport
+              </metal:field>
+            </span>
+        </div>
+        </div>
+
+        <div tal:condition="python:checkPermission('cofely.rma: View repair report', context)">
+        <div tal:condition="here/getRepairingHours|nothing" id="repairingHours">
+            <label>
+              <span class="prompt"
+                    i18n:translate="label_repairingHours">Worked hours</span>
+              :
+            </label>
+            <span class="value">
+              <metal:field use-macro="python:here.widget('repairingHours', mode='view')">
+              repairingHours
+              </metal:field>
+            </span>
+        </div>
+        </div>
+
+        <div tal:condition="python:checkPermission('cofely.rma: View repair report', context)">
+        <div tal:condition="here/getUsedMaterials|nothing" id="usedMaterials">
+            <label>
+              <span class="prompt"
+                    i18n:translate="label_usedMaterials">Used materials</span>
+              :
+            </label>
+            <span class="value">
+              <metal:field use-macro="python:here.widget('usedMaterials', mode='view')">
+              usedMaterials
+              </metal:field>
+            </span>
+        </div>
+        </div>
+
+        <br />
+
+        <div tal:condition="python:checkPermission('cofely.rma: View RMA', context)">
+        <div tal:condition="here/getCompany|nothing" id="company">
+            <label>
+              <span class="prompt"
+                    i18n:translate="label_company">Company</span>
+              :
+            </label>
+            <span class="value">
+              <metal:field use-macro="python:here.widget('company', mode='view')">
+              company
+              </metal:field>
+            </span>
+        </div>
+        </div>
+
+        <div tal:condition="python:checkPermission('cofely.rma: View RMA', context)">
+        <div tal:condition="here/getCompanyContact|nothing" id="companyContact">
+            <label>
+              <span class="prompt"
+                    i18n:translate="label_companyContact">Company Contact</span>
+              :
+            </label>
+            <span class="value">
+              <metal:field use-macro="python:here.widget('companyContact', mode='view')">
+              companyContact
+              </metal:field>
+            </span>
+        </div>
+        </div>
+
+        <div tal:condition="python:checkPermission('cofely.rma: View RMA', context)">
+        <div tal:condition="here/getCompanyPhone|nothing" id="companyPhone">
+            <label>
+              <span class="prompt"
+                    i18n:translate="label_companyPhone">Company Phonenumber</span>
+              :
+            </label>
+            <span class="value">
+              <metal:field use-macro="python:here.widget('companyPhone', mode='view')">
+              companyPhone
+              </metal:field>
+            </span>
+        </div>
+        </div>
+
+        <fieldset id="deliveryAdress">
+        <legend><span i18n:translate="label_deliveryAdress">Delivery adress</span></legend>
+
+            <div tal:condition="python:checkPermission('cofely.rma: View RMA', context)">
+            <div tal:condition="here/getDeliveryStreet|nothing" id="deliveryStreet">
+                <label>
+                  <span class="prompt"
+                        i18n:translate="label_Street">Street</span>
+                  :
+                </label>
+                <span class="value">
+                  <metal:field use-macro="python:here.widget('deliveryStreet', mode='view')">
+                  deliveryStreet
+                  </metal:field>
+                </span>
+            </div>
+            </div>
+
+            <div tal:condition="python:checkPermission('cofely.rma: View RMA', context)">
+            <div tal:condition="here/getDeliveryPostalcode|nothing" id="deliveryPostalcode">
+                <label>
+                  <span class="prompt"
+                        i18n:translate="label_Postalcode">Postalcode</span>
+                  :
+                </label>
+                <span class="value">
+                  <metal:field use-macro="python:here.widget('deliveryPostalcode', mode='view')">
+                  deliveryPostalcode
+                  </metal:field>
+                </span>
+            </div>
+            </div>
+
+            <div tal:condition="python:checkPermission('cofely.rma: View RMA', context)">
+            <div tal:condition="here/getDeliveryCity|nothing" id="deliveryCity">
+                <label>
+                  <span class="prompt"
+                        i18n:translate="label_City">City</span>
+                  :
+                  </label>
+                <span class="value">
+                  <metal:field use-macro="python:here.widget('deliveryCity', mode='view')">
+                  deliveryCity
+                  </metal:field>
+                </span>
+            </div>
+            </div>
+
+            <div tal:condition="python:checkPermission('cofely.rma: View RMA', context)">
+            <div tal:condition="here/getDeliveryCountry|nothing" id="deliveryCountry">
+                <label>
+                  <span class="prompt"
+                        i18n:translate="label_Country">Country</span>
+                  :
+                </label>
+                <span class="value">
+                  <metal:field use-macro="python:here.widget('deliveryCountry', mode='view')">
+                  deliveryCountry
+                  </metal:field>
+                </span>
+            </div>
+            </div>
+        </fieldset>
+
+        <div tal:replace="structure provider:plone.belowcontentbody" />
+        <div tal:replace="structure provider:plone.documentactions" />
+
+    </tal:main-macro>
+</metal:main>
+
+</body>
+</html>

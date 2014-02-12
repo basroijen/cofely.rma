@@ -1,0 +1,21 @@
+aangevraagd (klant) -- cancel rma (klant) --> canceled
+  |
+  | ontvangen (magazijn)
+  |
+  v
+ontvangen
+  |
+  | in behandeling (med alg)
+  |
+  v
+in behandeling                  ^                                ^
+  |                             |                                |
+  | reparatie gereed (monteur)  |wachten op materiaal (monteur)  | goedkeuring offerte (monteur)
+  |                             v                                v
+  v
+gereed voor verzending
+  |
+  | verzonden (magazijn)
+  |
+  v
+verzonden

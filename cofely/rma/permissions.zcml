@@ -1,0 +1,37 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="cofely.core" >
+
+    <!--<include package="collective.autopermission" />-->
+
+    <permission
+       id="cofely.rma.viewrma"
+       title="cofely.rma: View RMA"
+       />
+
+    <permission
+       id="cofely.rma.editrma"
+       title="cofely.rma: Edit RMA"
+       />
+
+    <permission
+       id="cofely.rma.viewrepair"
+       title="cofely.rma: View repair report"
+       />
+
+    <permission
+       id="cofely.rma.editrepair"
+       title="cofely.rma: Edit repair report"
+       />
+
+    <permission
+       id="cofely.rma.viewarrival"
+       title="cofely.rma: View Arrival date"
+       />
+
+    <permission
+       id="cofely.rma.editarrival"
+       title="cofely.rma: Edit Arrival date"
+       />
+
+</configure>

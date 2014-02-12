@@ -1,0 +1,2 @@
+recursive-include cofely *
+global-exclude *pyc

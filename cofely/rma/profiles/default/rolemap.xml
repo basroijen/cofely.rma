@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<rolemap>
+  <roles>
+        <!-- Define extra roles -->
+        <role name="Customer"/>
+        <role name="Employee general"/>
+        <role name="Warehouse employee"/>
+        <role name="Mechanic"/>
+    </roles>
+  <permissions>
+    <!-- -*- extra stuff goes here -*- -->
+    <permission name="cofely.rma: Add RMA folder" acquire="True">
+      <role name="Manager" />
+    </permission>
+    <permission name="cofely.rma: Add RMA" acquire="True">
+      <role name="Manager" />
+      <role name="Customer" />
+    </permission>
+    <permission name="cofely.rma: View RMA" acquire="True">
+      <role name="Manager" />
+      <role name="Owner" />
+    </permission>
+    <permission name="cofely.rma: Edit RMA" acquire="True">
+      <role name="Manager" />
+    </permission>
+    <permission name="cofely.rma: View repair report" acquire="True">
+      <role name="Manager" />
+    </permission>
+    <permission name="cofely.rma: Edit repair report" acquire="True">
+      <role name="Manager" />
+    </permission>
+    <permission name="cofely.rma: View Arrival date" acquire="True">
+      <role name="Manager" />
+    </permission>
+    <permission name="cofely.rma: Edit Arrival date" acquire="True">
+      <role name="Manager" />
+    </permission>
+  </permissions>
+</rolemap>

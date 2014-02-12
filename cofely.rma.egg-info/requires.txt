@@ -1,0 +1,4 @@
+setuptools
+Products.Archetypes
+plone.app.portlets
+Products.DataGridField

@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dc-workflow xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+             i18n:domain="plone"
+             workflow_id="RMA_Proces_Workflow"
+             title="RMA_Proces_Workflow"
+             description=""
+             state_variable="review_state"
+             initial_state="requested"
+             i18n:attributes="title; description">
+ <permission>cofely.rma: View RMA</permission>
+ <permission>cofely.rma: Edit RMA</permission>
+ <permission>cofely.rma: View repair report</permission>
+ <permission>cofely.rma: Edit repair report</permission>
+ <permission>cofely.rma: View Arrival date</permission>
+ <permission>cofely.rma: Edit Arrival date</permission>
+ <permission>View</permission>
+ <permission>Modify portal content</permission>
+ <permission>Sharing page: Delegate roles</permission>
+ <state state_id="requested" title="Requested" i18n:attributes="title">
+  <exit-transition transition_id="received"/>
+  <exit-transition transition_id="receivedProcessed"/>
+  <permission-map name="cofely.rma: View RMA" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit RMA" acquired="True">
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View Arrival date" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit Arrival date" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Sharing page: Delegate roles" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+ </state>
+ <state state_id="arrived" title="Arrived" i18n:attributes="title">
+  <exit-transition transition_id="processed"/>
+  <permission-map name="cofely.rma: View RMA" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit RMA" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View Arrival date" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit Arrival date" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Copy or Move" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Sharing page: Delegate roles" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+ </state>
+ <state state_id="in_repair_rack" title="In repairing rack" i18n:attributes="title">
+  <exit-transition transition_id="start_repair"/>
+  <permission-map name="cofely.rma: View RMA" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit RMA" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View Arrival date" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit Arrival date" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content" acquired="False">
+   <!--<permission-role>Employee general</permission-role>-->
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Copy or Move" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Sharing page: Delegate roles" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+ </state>
+ <state state_id="in_repair" title="In repair" i18n:attributes="title">
+  <exit-transition transition_id="made_tender"/>
+  <permission-map name="cofely.rma: View RMA" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit RMA" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+   <permission-role>Employee general</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+   <permission-role>Employee general</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View Arrival date" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit Arrival date" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Copy or Move" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Sharing page: Delegate roles" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+ </state>
+ <state state_id="tender_approval" title="Tender approval" i18n:attributes="title">
+  <exit-transition transition_id="approved"/>
+  <exit-transition transition_id="approved_waiting"/>
+  <permission-map name="cofely.rma: View RMA" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit RMA" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+   <permission-role>Employee general</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+   <permission-role>Employee general</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View Arrival date" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit Arrival date" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Copy or Move" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Sharing page: Delegate roles" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+ </state>
+ <state state_id="waiting_for_material" title="Waiting for material" i18n:attributes="title">
+  <exit-transition transition_id="repaired"/>
+  <permission-map name="cofely.rma: View RMA" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit RMA" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+   <permission-role>Employee general</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+   <permission-role>Employee general</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View Arrival date" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit Arrival date" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Copy or Move" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Sharing page: Delegate roles" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+ </state>
+ <state state_id="repaired" title="Repaired" i18n:attributes="title">
+  <exit-transition transition_id="ready_for_dispatch"/>
+  <permission-map name="cofely.rma: View RMA" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit RMA" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+   <permission-role>Employee general</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+   <permission-role>Employee general</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View Arrival date" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit Arrival date" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Copy or Move" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Sharing page: Delegate roles" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+ </state>
+ <state state_id="ready_for_dispatch" title="Ready for dispatch" i18n:attributes="title">
+  <exit-transition transition_id="completed"/>
+  <permission-map name="cofely.rma: View RMA" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit RMA" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+   <permission-role>Employee general</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View Arrival date" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit Arrival date" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content" acquired="False">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Copy or Move" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Sharing page: Delegate roles" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+ </state>
+ <state state_id="completed" title="Completed" i18n:attributes="title">
+  <permission-map name="cofely.rma: View RMA" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit RMA" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+   <permission-role>Employee general</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit repair report" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: View Arrival date" acquired="True">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="cofely.rma: Edit Arrival date" acquired="True">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="View" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+   <permission-role>Owner</permission-role>
+  </permission-map>
+  <permission-map name="Modify portal content" acquired="False">
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Copy or Move" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+  <permission-map name="Sharing page: Delegate roles" acquired="False">
+   <permission-role>Employee general</permission-role>
+   <permission-role>Manager</permission-role>
+  </permission-map>
+ </state>
+
+ <transition transition_id="received" title="Received" new_state="arrived" trigger="USER" before_script="" after_script="" i18n:attributes="title">
+  <action url="" category="workflow">Received</action>
+  <guard>
+   <guard-role>Manager</guard-role>
+   <guard-role>Employee general</guard-role>
+  </guard>
+ </transition>
+ <transition transition_id="receivedProcessed" title="Received and Processed" new_state="in_repair_rack" trigger="USER" before_script="" after_script="" i18n:attributes="title">
+  <action url="" category="workflow">Received and Processed</action>
+  <guard>
+   <guard-role>Manager</guard-role>
+   <guard-role>Employee general</guard-role>
+  </guard>
+ </transition>
+ <transition transition_id="processed" title="Processed" new_state="in_repair_rack" trigger="USER" before_script="" after_script="" i18n:attributes="title">
+  <action url="" category="workflow">Processed</action>
+  <guard>
+   <guard-role>Manager</guard-role>
+   <guard-role>Employee general</guard-role>
+  </guard>
+ </transition>
+ <transition transition_id="start_repair" title="Start repair" new_state="in_repair" trigger="USER" before_script="" after_script="" i18n:attributes="title">
+  <action url="" category="workflow">Start repair</action>
+  <guard>
+   <guard-role>Manager</guard-role>
+   <guard-role>Employee general</guard-role>
+  </guard>
+ </transition>
+ <transition transition_id="made_tender" title="Made tender" new_state="tender_approval" trigger="USER" before_script="" after_script="" i18n:attributes="title">
+  <action url="" category="workflow">Made tender</action>
+  <guard>
+   <guard-role>Manager</guard-role>
+   <guard-role>Employee general</guard-role>
+  </guard>
+ </transition>
+ <transition transition_id="approved" title="Tender approved" new_state="repaired" trigger="USER" before_script="" after_script="" i18n:attributes="title">
+  <action url="" category="workflow">Tender approved</action>
+  <guard>
+   <guard-role>Manager</guard-role>
+   <guard-role>Employee general</guard-role>
+  </guard>
+ </transition>
+ <transition transition_id="approved_waiting" title="Approved and waiting for material" new_state="waiting_for_material" trigger="USER" before_script="" after_script="" i18n:attributes="title">
+  <action url="" category="workflow">Approved and waiting for material</action>
+  <guard>
+   <guard-role>Manager</guard-role>
+   <guard-role>Employee general</guard-role>
+  </guard>
+ </transition>
+ <transition transition_id="repaired" title="Repair finished" new_state="repaired" trigger="USER" before_script="" after_script="" i18n:attributes="title">
+  <action url="" category="workflow">Repair finished</action>
+  <guard>
+   <guard-role>Manager</guard-role>
+   <guard-role>Employee general</guard-role>
+  </guard>
+ </transition>
+ <transition transition_id="ready_for_dispatch" title="Ready for dispatch" new_state="ready_for_dispatch" trigger="USER" before_script="" after_script="" i18n:attributes="title">
+  <action url="" category="workflow">Ready for dispatch</action>
+  <guard>
+   <guard-role>Manager</guard-role>
+   <guard-role>Employee general</guard-role>
+  </guard>
+ </transition>
+ <transition transition_id="completed" title="Completed" new_state="completed" trigger="USER" before_script="" after_script="" i18n:attributes="title">
+  <action url="" category="workflow">Completed</action>
+  <guard>
+   <guard-role>Manager</guard-role>
+   <guard-role>Employee general</guard-role>
+  </guard>
+ </transition>
+
+ <variable variable_id="action" for_catalog="False" for_status="True" update_always="True">
+  <description>The last transition</description>
+  <default>
+   <expression>transition/getId|nothing</expression>
+  </default>
+  <guard>
+  </guard>
+ </variable>
+ <variable variable_id="actor" for_catalog="False" for_status="True" update_always="True">
+  <description>The ID of the user who performed the last transition</description>
+  <default>
+   <expression>user/getId</expression>
+  </default>
+  <guard>
+  </guard>
+ </variable>
+ <variable variable_id="comments" for_catalog="False" for_status="True" update_always="True">
+  <description>Comments about the last transition</description>
+  <default>
+   <expression>python:state_change.kwargs.get('comment', '')</expression>
+  </default>
+  <guard>
+  </guard>
+ </variable>
+ <variable variable_id="review_history" for_catalog="False" for_status="False" update_always="False">
+  <description>Provides access to workflow history</description>
+  <default>
+   <expression>state_change/getHistory</expression>
+  </default>
+  <guard>
+   <guard-permission>Request review</guard-permission>
+   <guard-permission>Review portal content</guard-permission>
+  </guard>
+ </variable>
+ <variable variable_id="time" for_catalog="False" for_status="True" update_always="True">
+  <description>Time of the last transition</description>
+  <default>
+   <expression>state_change/getDateTime</expression>
+  </default>
+  <guard>
+  </guard>
+ </variable>
+</dc-workflow>

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<layers>  
+  <layer name="cofely.rma"
+         interface="cofely.rma.interfaces.rmabrowserlayer.IRMABrowserLayer" />
+</layers>

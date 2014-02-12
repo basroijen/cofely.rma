@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_catalog" meta_type="Plone Catalog Tool">
+  <!-- Do NOT add indexes here, it doesn't work correctly
+       See add_catalog_indexes in setuphandlers.py instead
+       Use column values if the index needs to be in the returned brains -->
+  <!-- rma -->
+  <column value="getArrivalDate"/>
+  <column value="getCompany"/>
+  <column value="getRmaNumber"/>
+  <column value="getRepairingReport"/>
+</object>
